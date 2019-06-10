@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # 1. JSONObject的toString()和toJSONString()的区别？
 
 ```java
@@ -21,12 +25,6 @@ public String toJSONString() {
 ```
 
 根据以上代码可见，toString()方法实际调用的是toJSONString()方法，因此两者一样
-
-
-
-
-
-
 
 1.午餐：代餐棒+一个鸡腿+蔬菜（绿叶菜）
 
