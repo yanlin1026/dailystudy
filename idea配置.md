@@ -26,3 +26,16 @@ groovyScript(
     groovyScript("def returnType = \"${_1}\"; def result = '* @return: ' + returnType; return result;", methodReturnType());
 
 ```
+
+# 配置代码模板
+
+1. 日志
+
+   ```java
+   private static final Logger logger = LoggerFactory.getLogger($class$.class);
+   
+   logger.info("$CLASS_NAME$ $METHOD_NAME$ request = ", $ARGUMENTS$);
+   
+   ```
+
+   
