@@ -16,7 +16,7 @@ groovyScript(
 
 groovyScript(
         "def result='';
-        def params=\"${_1}\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); 
+        def params=\"${_1}\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList();
         for(i = 0; i < params.size(); i++) {
             result +=' * @param ' + params[i] + ((i < params.size() - 1) ? '\\n' : '')};
             return result ", methodParameters());
@@ -33,9 +33,21 @@ groovyScript(
 
    ```java
    private static final Logger logger = LoggerFactory.getLogger($class$.class);
-   
+
    logger.info("$CLASS_NAME$ $METHOD_NAME$ request = ", $ARGUMENTS$);
-   
+
    ```
 
-   
+# 注册表
+1. 添加markdown新建
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.md]
+@="TyporaMarkdownFile"
+"PerceivedType"="text"
+"Content Type"="text/plain"
+
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+"NullFile"=""
+```
