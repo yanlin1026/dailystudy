@@ -1,4 +1,5 @@
-1. 在 idea 中使用阿里巴巴代码规范插件及快捷注释的配置https://www.jianshu.com/p/8e4423744231?utm_campaign
+1. 
+2. 在 idea 中使用阿里巴巴代码规范插件及快捷注释的配置https://www.jianshu.com/p/8e4423744231?utm_campaign
 
 ```groovy
 groovyScript(
@@ -36,6 +37,16 @@ groovyScript(
    
    logger.info("$CLASS_NAME$ $METHOD_NAME$ request = ", $ARGUMENTS$);
    
+   ```
+
+将md加入到右键新建中
+
+
+   ```
+   Windows Registry Editor Version 5.00
+   [HKEY_CLASSES_ROOT\.md\ShellNew]
+   "NullFile"=""
+   "FileName"="template.md"
    ```
 
    
