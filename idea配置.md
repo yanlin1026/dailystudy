@@ -49,4 +49,6 @@ groovyScript(
    "FileName"="template.md"
    ```
 
-   
+IDEA激活码生成   https://zhile.io/custom/license
+
+IDEA激活https://zhile.io/
