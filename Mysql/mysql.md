@@ -81,6 +81,16 @@
 |        事务的隔离级别        | 脏读 | 不可重复读 | 幻读 |
 | :--------------------------: | :--: | :--------: | :--: |
 | 读未提交（read-uncommitted） |  是  |     是     |  是  |
-| 不可重复读（read-committed） |  否  |     是     |  是  |
-| 可重复读（repeatable-read）  |  否  |     是     |  是  |
+|  读已提交（read-committed）  |  否  |     是     |  是  |
+| 可重复读（repeatable-read）  |  否  |     否     |  是  |
 |    串行化（serializable）    |  否  |     否     |  否  |
+
+**可重复读（repeatable-read）**：，同一个事务，连续两次执行相同的sql，返回的结果可能不同。innoDB采用的是Next-key locking机制即刻避免**幻读**。
+
+ 不可重复读的和幻读很容易混淆，不可重复读侧重于**修改**，幻读侧重于**新增或删除**。 
+
+### InnoDB提供了三种锁的算法
+
+行锁(record-lock)、间隙锁(gap-lock)、行锁+间隙锁(Next-key locking)（锁定记录本身，锁定一个范围）
+
+当查询的索引有唯一属性（例如**唯一主键**）时，Next-key locking会退化为record-lock，从而提高系统的并发性。
