@@ -23,7 +23,5 @@ A：违反java沙箱安全机制
 否则 JavaFX 应用程序类必须扩展javafx.application.Application
 ```
 
----
-
-
+# 3.面试题： java中包装类，为什么要有包装类？
 
