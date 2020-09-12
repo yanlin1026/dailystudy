@@ -1,10 +1,19 @@
-[TOC]
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [1. jvm运行时数据区](#1-jvm运行时数据区)
+	- [1.1 jdk 1.7](#11-jdk-17)
+		- [1.1.1 程序计数器](#111-程序计数器)
+		- [1.1.2 虚拟机栈](#112-虚拟机栈)
+			- [局部变量表](#局部变量表)
+		- [1.1.3 本地方法栈](#113-本地方法栈)
+		- [1.1.4 堆](#114-堆)
+		- [1.1.5 方法区(与堆很像)](#115-方法区与堆很像)
+	- [1.2 jdk 1.8](#12-jdk-18)
 
-
+<!-- /TOC -->
 # 1. jvm运行时数据区
 
-## 1.1 jdk 1.7 
+## 1.1 jdk 1.7
 
 <img src="assets/jvm内存区域.assets/image-20200910172732851.png" style="zoom:0.8">
 
@@ -39,13 +48,13 @@ java方法记录字节码指令的地址，native方法则是Undefined。
 >         fun();
 >     }
 > }
-> 
+>
 > ```
 >
 > **【面试题】写一个OutOfMemoryError的异常出来**
 >
-> ```java 
-> public class OutOfMemoryError{ 
+> ```java
+> public class OutOfMemoryError{
 > 	public static void main(String[] args) {
 >         List<Object> list = new ArrayList<Object>();
 >         while (true){
@@ -55,7 +64,7 @@ java方法记录字节码指令的地址，native方法则是Undefined。
 > }
 > ```
 >
-> 
+>
 
 
 
