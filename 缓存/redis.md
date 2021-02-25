@@ -122,6 +122,16 @@ typedef struct dictEntry {
 
 参考java的HashMap
 
+redis采用链地址发解决hash冲突，
+
+1. redis自动为hash表进行扩展或者收缩
+2. 每个字典包含两个hash表，一个使用，一个rehash才用
+3. 渐进式的扩展与收缩，慢慢完成
+
+
+
+
+
 
 
 
